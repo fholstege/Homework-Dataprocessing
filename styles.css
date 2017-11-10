@@ -1,0 +1,21 @@
+
+/* Stylesheet for the file "weather.html"*/
+
+canvas {
+    margin: auto;
+    display: block;
+    position: absolute;
+    border: 1px solid black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+h1 {
+	text-align:center;
+}
+
+p {
+	text-align:center;
+}
