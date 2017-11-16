@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+	<!-- link to D3 package, version 3 -->
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+
+	<!-- script for barchart -->
+	<script src="barchart.js"></script>
+
+
+<!-- Internal stylesheet -->
+<style>
+
+
+/* determine colour bars */
+.chart rect {
+  		fill: steelblue;
+		}
+
+/* apply to text in tooltip */
+.chart text {
+  		fill: black;
+  		font: 10px sans-serif;
+  		text-anchor: end;
+		}
+
+/* attributes for tooltip */
+.d3-tip {
+	  line-height: 1;
+	  font-weight: bold;
+	  padding: 12px;
+	  background: rgba(0, 0, 0, 1);
+	  color: #fff;
+	  border-radius: 2px;
+	}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- title of the barchart -->
+<h1 style="text-align:center;">Share of renewable energy consumption out of total energy consumption (%) </h1>
+<p style="text-align:center;"> For all current EU member states </p>
+
+<!-- creation of svg -->
+<svg class="chart"> </svg>
+
+<!-- credit for creator -->
+<p> Created by Floris Holstege </p>
+
+</body>
+
+</html>
