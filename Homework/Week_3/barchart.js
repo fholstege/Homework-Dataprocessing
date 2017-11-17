@@ -13,8 +13,6 @@ var margin = {top: 20, right: 30, bottom: 100, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-console.log("test")
-
 // access dataset
 d3.json("renewable_data_final.json", function(data){
 
@@ -49,6 +47,17 @@ d3.json("renewable_data_final.json", function(data){
             return "translate(" + i * barWidth + ",0)"; 
         });
 
+    // create tooltip
+    var tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return "<span>" + d+ "% </span>";
+        })
+
+    // initiate tooltip
+    chart.call(tip);
+
     // create bars for barplot
 	bar.append("rect")
 
@@ -79,17 +88,6 @@ d3.json("renewable_data_final.json", function(data){
     function changecolour(colour){
         d3.select(this).style("fill", colour)
     };
-
-    // create tooltip
-    var tip = d3.tip()
-        .attr('class', 'd3-tip')
-        .offset([-10, 0])
-        .html(function(d) {
-          return "<span>" + d+ "% </span>";
-        })
-
-    // initiate tooltip
-    chart.call(tip);
 
     // create scale for X axis
     var XaxisScale = d3.scale.ordinal()
