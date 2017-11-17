@@ -26,7 +26,7 @@ class CSVtoJSON:
 			json.dump(self.data_list, outfile)
 
 
-test = CSVtoJSON("renewable_data.csv")
-test.write_JSON("renewable_data.json")
+Convert = CSVtoJSON("renewable_data_final.csv")
+Convert.write_JSON("renewable_data_final.json")
 
 

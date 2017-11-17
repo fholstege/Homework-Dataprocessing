@@ -1,3 +1,8 @@
+/*
+ * Floris Holstege - 12002151 
+ * Homework week 3 
+ * Creates a barplot using D3
+ */
 
 // define lists to store data
 var data_renewables = [],
@@ -8,9 +13,7 @@ var margin = {top: 20, right: 30, bottom: 100, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-// define size of the barplot
-var width = 1000,
-    height = 500;
+console.log("test")
 
 // access dataset
 d3.json("renewable_data_final.json", function(data){
@@ -26,7 +29,6 @@ d3.json("renewable_data_final.json", function(data){
 	var scale = d3.scale.linear()
 	    .domain([0, d3.max(data_renewables)])
 	    .range([height, 0]);
-
 
     // determine size of barplot
 	var chart = d3.select(".chart")
@@ -47,6 +49,37 @@ d3.json("renewable_data_final.json", function(data){
             return "translate(" + i * barWidth + ",0)"; 
         });
 
+    // create bars for barplot
+	bar.append("rect")
+
+        // when mouse hovers over, changes colour and shows data
+        .on("mouseover", function(d){
+            changecolour.call(this, "green");
+            tip.show(d);
+        })
+
+        // when mouse has left, original colour and no data is depicted
+        .on("mouseout", function(d){
+            changecolour.call(this, "steelblue")
+            tip.hide(d)
+        })
+        .attr({"height": 0,
+               "y": height})
+
+        // ensure transition when user opens page
+        .transition().duration(1000)
+        .delay(function(d,i){ return i * 50;} )
+
+        // set bars to appropriate height
+	    .attr({"y": function(d) {return scale(d);},
+      	       "height": function(d) {return height - scale(d);},
+      	       "width": barWidth - 1 });
+
+    // function to change colour of element
+    function changecolour(colour){
+        d3.select(this).style("fill", colour)
+    };
+
     // create tooltip
     var tip = d3.tip()
         .attr('class', 'd3-tip')
@@ -57,32 +90,6 @@ d3.json("renewable_data_final.json", function(data){
 
     // initiate tooltip
     chart.call(tip);
-
-    // create bars for barplot
-	bar.append("rect")
-        // when mouse hovers over, changes colour and shows data
-        .on("mouseover", function(d){
-            changecolour.call(this, "green");
-            tip.show(d);
-        })
-        // when mouse has left, original colour and no data is depicted
-        .on("mouseout", function(d){
-            changecolour.call(this, "steelblue")
-            tip.hide(d)
-        })
-        .attr({"height": 0,
-               "y": height})
-        // ensure transition when user opens page
-        .transition().duration(3000)
-        .delay(function(d,i){ return i * 200;} )
-	    .attr({"y": function(d) {return scale(d);},
-      	       "height": function(d) {return height - scale(d);},
-      	       "width": barWidth - 1 });
-
-        // function to change colour of element
-        function changecolour(colour){
-        d3.select(this).style("fill", colour)
-        }
 
     // create scale for X axis
     var XaxisScale = d3.scale.ordinal()
@@ -100,9 +107,10 @@ d3.json("renewable_data_final.json", function(data){
     	.attr("transform", "translate(0," + height + ")")
     	.call(xAxis)
         .selectAll("text")
-        .attr("transform", "rotate(60)")
-        .attr({"dx": "3.75em",
-               "dy": "1.25em"})
+        .attr({"transform": "rotate(60)",
+               "dx": "3.75em",
+               "dy": "1.25em"
+           })
 
     // create scale for Y axis
     var YaxisScale = d3.scale.linear()
@@ -116,6 +124,6 @@ d3.json("renewable_data_final.json", function(data){
 
     // add y axis to SVG
     chart.append("g")
-    	.call(yAxis);
+    	.call(yAxis)
     	
 })
