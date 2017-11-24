@@ -1,0 +1,50 @@
+/*
+ * Floris Holstege - 12002151 
+ * Homework week 4
+ * stylesheet for scatterplot
+ */
+
+
+/* attributes for tooltip */
+.d3-tip {
+		  line-height: 1;
+		  padding: 12px;
+		  background: rgba(0, 0, 0, 0.75);
+		  color: #fff;
+		  border-radius: 2px;
+		}
+
+.scatter {
+	align-items: center;
+}
+
+/* attributes for the header */
+.header{
+	text-align: center;
+}
+
+/* attributes for the axis */
+.axis{
+	stroke: black; 
+	fill: none;
+	stroke-width: 1px; 
+	font: 10px sans-serif
+}
+
+/* attributes for the label*/
+.label{
+	font: 10px sans-serif
+}
+
+/* attributes for the description */
+.description{
+	text-anchor: start; 
+	font:10px sans-serif
+}
+
+/* attributes for the title of legend */
+.title{
+	text-anchor:start;
+	font:10px sans-serif;
+	font-weight:bold;
+}
