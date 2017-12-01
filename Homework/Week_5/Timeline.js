@@ -1,3 +1,9 @@
+/*
+ * Floris Holstege - 12002151 
+ * Homework week 5
+ * Creates a linegraph using D3
+ */
+
 // define margins scatterplot
 var margin = {top: 20, right: 20, bottom: 30, left: 150},
     width = 960 - margin.left - margin.right,
