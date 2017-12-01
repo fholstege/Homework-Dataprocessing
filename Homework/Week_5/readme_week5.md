@@ -1,4 +1,4 @@
-# explanation for later added files
+# Explanation for later added files
 Dear TA, 
 
 In order to clarify why there are certain changes after the deadline, here follows an explanation: 
