@@ -168,7 +168,7 @@ window.onload = function(d){
 
 var countries = []
 var colours = ["red", "green", "blue", "orange", "yellow", "purple", "teal",
-                 "cyan", "magneta", "brown", "lime", "maroon", "black", "pink"]
+                 "cyan", "magenta", "brown", "lime", "maroon", "grey", "pink"]
 
 // load in data 
 d3.json("MENA_data.json", function(error, data){
