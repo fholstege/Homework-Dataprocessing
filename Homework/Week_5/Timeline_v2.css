@@ -38,7 +38,6 @@
 /* attributes for the line*/
 .line {
   fill: none;
-  stroke: red;
   stroke-width: 3.5px;
 }
 
