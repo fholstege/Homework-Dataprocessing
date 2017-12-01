@@ -1,0 +1,89 @@
+
+
+/* attributes for the header */
+.header{
+	text-align: center;
+}
+
+/* attributes for the source paragraph*/
+.source{
+	position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+/* attributes for the background*/
+.background{
+	font: 10px sans-serif;
+	font-size: 400%;
+	fill: grey;
+	opacity: 0.25;
+}
+
+/* attributes for the x axis */
+.x_axis{
+	stroke: black; 
+	fill: none;
+	stroke-width: 1px; 
+	font: 11px sans-serif;
+}
+
+/* attributes for the y axis*/
+.y_axis{
+	stroke: black; 
+	fill: none;
+	stroke-width: 1px; 
+	font: 11px sans-serif;
+}
+
+/* attributes for the line*/
+.line {
+  fill: none;
+  stroke: red;
+  stroke-width: 3.5px;
+}
+
+/* attributes for the crossline*/
+.crossline {
+	fill: none;
+    stroke: blue;
+    stroke-width: 2;
+    stroke-opacity: 0.5;
+}
+
+/* attributes for the label*/
+.label{
+	font: 11px sans-serif;
+	fill: black;
+}
+
+/* attributes for the button*/
+.button{
+	background: steelblue;
+	margin: auto;
+    width: 15%;
+    position: absolute;
+    top: 75px;
+    right: 20px;
+
+}
+
+/* attributes for the option*/
+.option{
+	border-style: solid;
+	border-width: 1px;
+	background: steelblue;
+}
+
+/* attributes for the legend */
+.legend{
+	position: absolute;
+    top: 75px;
+    left: 20px;
+}
+
+/* attributes for the title of legend */
+.title{
+	text-anchor:start;
+	font:10px sans-serif;
+	font-weight:bold;
+}
