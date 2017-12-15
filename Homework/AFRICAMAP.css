@@ -1,0 +1,110 @@
+/* 
+ * External stylesheet for "How connected is Africa?"
+ */
+
+/* attributes for the title*/
+h1 {
+  text-align: center;
+}
+
+/* attributes for the linegraph title */
+h2 {
+	text-align: left;
+}
+
+/* attributes for the position of the slider*/
+p.slider{
+	width:525px;
+	position:absolute;
+	left: 50px;
+	top: 220px;
+}
+
+/* attributes for the line of the linegraph*/
+.line {
+  fill:none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+/* attributes for the position of the button*/
+.menu{
+	position:absolute;
+	top:20px;
+	right:200px;
+}
+
+/* attributes for the crossline*/
+line.crossline {
+	fill: none;
+    stroke: green;
+    stroke-width: 2;
+    stroke-opacity: 0.5;
+}
+
+/* general font for all text */
+text{
+	
+	font: 10px sans-serif;
+}
+
+/* text attributes for story and source */
+p.story{
+	position:absolute;
+	bottom:-140px;
+	text-align:left;
+	width:580px;
+	left:30px;
+	font-size: 95%;
+}
+
+/* determine position of the linegraph */
+.linegraph{
+	position: absolute;
+	bottom: 100px;
+}
+
+/* attributes for the linegraph title */
+text.linegraph-title{
+	font-size: 100%;
+}
+
+/* attribute for country */
+.countries{
+	fill: none;
+}
+
+/* attribute for borders */
+.borders {
+  fill:none;
+  stroke: black;
+}
+
+/* attributes for tooltip */
+.d3-tip {
+		  line-height: 1;
+		  padding: 12px;
+		  background: rgba(0, 0, 0, 0.75);
+		  color: #fff;
+		  border-radius: 2px;
+		}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+ 
+/* Style northward tooltips specifically */
+.d3-tip.n:after {
+    margin: -2px 0 0 0;
+    top: 100%;
+     left: 0;
+}
