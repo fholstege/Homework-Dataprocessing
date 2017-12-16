@@ -69,7 +69,7 @@ button
 
 // queue 
 var q = d3.queue()
-  .defer(d3.json, "StationsNationaaltest.json")
+  .defer(d3.json, "StationsNationaal.json")
   .defer(d3.json, "Greedy_4.json")
   .defer(d3.json, "HillclimberNoordZuid.json")
   .await(makemap);
