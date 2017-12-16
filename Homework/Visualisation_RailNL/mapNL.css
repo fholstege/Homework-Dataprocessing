@@ -1,0 +1,19 @@
+.header {
+	text-align:center;
+}
+
+/* attributes for tooltip */
+.d3-tip {
+		  line-height: 1;
+		  padding: 12px;
+		  background: rgba(0, 0, 0, 0.75);
+		  color: #fff;
+		  border-radius: 2px;
+		}
+
+/* attributes for the position of the button*/
+.menu{
+	position:absolute;
+	top:20px;
+	right:200px;
+}
