@@ -50,7 +50,7 @@ text{
 
 /* text attributes for story and source */
 p.story{
-	position:absolute;
+	position:relative;
 	bottom:-140px;
 	text-align:left;
 	width:580px;
