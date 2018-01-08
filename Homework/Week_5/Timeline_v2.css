@@ -7,7 +7,7 @@
 
 /* attributes for the source paragraph*/
 .source{
-	position: absolute;
+    position: relative;
     bottom: 8px;
     left: 16px;
 }
